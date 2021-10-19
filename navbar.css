@@ -1,0 +1,70 @@
+/*=============
+Nabar Container
+=============*/
+.navbar-wrapping-container,
+.navbar-container {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    background-color: var(--clr-prm-orange);
+}
+
+.navbar-wrapping-container {
+    --navbar-curve: 1.3rem;
+    border-radius: 0 0 var(--navbar-curve) var(--navbar-curve);
+    box-shadow: 0px 4px 7px rgb(0 0 0 / 25%);
+}
+
+.navbar-container {
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*------------
+Logo Container
+------------*/
+.navbar-container .logo-container {
+    width: 9%;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.navbar-container .logo-container img {
+    width: 100%;
+    --logo-name-gap: 0.15rem;
+    margin-left: var(--logo-name-gap);
+    margin-right: var(--logo-name-gap);
+}
+
+.navbar-container .logo-container img.logo {
+    width: 60%;
+}
+
+/*------------------
+Page Links Container
+------------------*/
+.navbar-container .page-links-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container .page-links-container a {
+    color: var(--clr-txt-white);
+    letter-spacing: 1px;
+}
+
+.navbar-container .page-links-container a:nth-of-type(4) {
+    margin-right: 0;
+}
+
+.navbar-container .page-links-container button {
+    border: 2px solid var(--clr-prm-white);
+    box-shadow: none;
+}

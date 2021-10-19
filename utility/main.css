@@ -155,23 +155,22 @@ p {
 }
 
 a {
-    margin: 0.5rem 1.1rem;
-    padding: 0.3em 0;
-    /* padding-top: 0.3em;
-    padding-bottom: 0.3em; */
+    margin: 0.5rem 0.8rem;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
     text-decoration: none;
 }
 
 a.active-link {
     position: relative;
     padding-bottom: 0;
-    color: var(--clr-txt-primary);
+    color: var(--clr-prm-black)!important;
 }
  
 a.inactive-link {
     position: relative;
     padding-bottom: 0;
-    color: var(--clr-txt-secondary);
+    color: var(--clr-prm-white)!important;
 }
 
 a.active-link::after,
@@ -198,7 +197,7 @@ a.inactive-link:hover::after {
 
 hr { 
     border: 0;
-    margin: 5rem auto;
+    margin: 3rem auto;
     width: 70%;
     height: 1px; 
     background-image: -webkit-linear-gradient(left, #ffffff, #707070, #000000, #707070, #ffffff);
@@ -265,45 +264,42 @@ img {
 }
 
 .big-heading-1 {
-    font-family: var(--ff-primary);
-    font-weight: var(--ff-primary-bold);
-    font-size: 5rem;
+    font-family: var(--ff-brandon);
+    font-weight: bold;
+    font-size: 4.2rem;
 }
 
 .big-heading-2 {
-    font-family: var(--ff-primary);
-    font-weight: var(--ff-primary-bold);
-    font-size: 8rem;
-    line-height: 0.75;
+    font-family: var(--ff-brandon);
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.2;
 }
 
 .heading {
-    font-family: var(--ff-primary);
+    font-family: var(--ff-brandon);
     font-weight: var(--ff-primary-medium);
     font-size: 3rem;
     line-height: 1.2;
 }
 
 .sub-heading {
-    font-family: var(--ff-secondary);
-    font-weight: var(--ff-secondary-regular);
+    font-family: var(--ff-carattere);
     font-size: 1.3rem;
     letter-spacing: 0.02rem;
     margin-top: 1rem;
 }
 
 .text-heading {
-    font-family: var(--ff-primary);
-    font-weight: var(--ff-primary-medium);
+    font-family: var(--ff-brandon);
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     margin: auto;
 }
 
 .text-sub-heading {
-    font-family: var(--ff-secondary);
-    font-weight: var(--ff-secondary-regular);
-    font-size: 1rem;
+    font-family: var(--ff-brandon);
+    font-size: 1.32rem;
     margin-top: 1.1rem;
     margin-bottom: 1.1rem;
 }

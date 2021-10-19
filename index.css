@@ -1,0 +1,95 @@
+/*================ 
+Tag Line Container 
+================*/
+.tag-line-wrapping-container {
+
+}
+
+.tag-line-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-line-container .tag-line {
+    width: 47%;
+}
+
+.tag-line-container .image-container {
+    width: 53%;
+    padding: 0;
+}
+
+.tag-line-container .tag-line p.text-sub-heading:nth-of-type(3) {
+    margin-top: 0;
+}
+
+/*===================== 
+Photo Gallery Container 
+=====================*/
+.photo-gallery-container {
+    align-items: center;
+}
+
+.photo-gallery-container .heading-container {
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 4rem;
+}
+
+.photo-gallery-container .photo-gallery.bootstrap .carousel-inner-wrapper {
+    width: 70%;
+    max-height: 700px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+}
+
+.photo-gallery-container .photo-gallery.bootstrap .carousel-inner {
+    /* width: 70%;
+    max-height: 700px;
+    margin: auto; */
+}
+
+/* .photo-gallery-container .photo-gallery.bootstrap .carousel-inner .carousel-item {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* .photo-gallery-container .photo-gallery.bootstrap .carousel-inner .carousel-item img {
+    width: 25% !important;
+    max-height: 500px;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+} */
+
+.photo-gallery-container .photo-gallery.bootstrap button.carousel-control-prev,
+.photo-gallery-container .photo-gallery.bootstrap button.carousel-control-next {
+    box-shadow: none;
+    height: 100%;
+}
+
+.photo-gallery-container .photo-gallery.bootstrap button.carousel-control-prev .fas,
+.photo-gallery-container .photo-gallery.bootstrap button.carousel-control-next .fas {
+    color: var(--clr-prm-black);
+}
+
+.photo-gallery-container .photo-gallery.multiple-items {
+    width: 100%;
+    margin: auto;
+}
+
+.photo-gallery-container .photo-gallery.multiple-items .item {
+    margin: 1rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+}
+
+.photo-gallery-container .photo-gallery.multiple-items .item img {
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+}
