@@ -197,7 +197,7 @@ a.inactive-link:hover::after {
 
 hr { 
     border: 0;
-    margin: 3rem auto;
+    margin: 1.5rem auto;
     width: 70%;
     height: 1px; 
     background-image: -webkit-linear-gradient(left, #ffffff, #707070, #000000, #707070, #ffffff);
@@ -248,6 +248,10 @@ img {
 /*-------------
  Custom Classes
 -------------*/
+.text-bold {
+    font-weight: bold;
+}
+
 .text-shadow {
     text-shadow: 0 3px 7px rgb(0 0 0 / 15%);
 }
@@ -259,7 +263,7 @@ img {
     margin: auto;
 }
 
-.primary-color-text {
+.text-primary-color {
     color: var(--clr-prm-orange)!important;
 }
 
@@ -277,7 +281,7 @@ img {
 }
 
 .heading {
-    font-family: var(--ff-brandon);
+    font-family: var(--ff-carattere);
     font-weight: var(--ff-primary-medium);
     font-size: 3rem;
     line-height: 1.2;
@@ -312,6 +316,10 @@ img {
 
 .container-parent {
     margin: 3rem 0;
+}
+
+.wrapping-container {
+    margin: 0rem;   
 }
 
 @media only screen and (max-width: 768px) {
