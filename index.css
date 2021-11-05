@@ -11,11 +11,11 @@ Tag Line Container
 }
 
 .tag-line-container .tag-line {
-    width: 47%;
+    width: 50%;
 }
 
 .tag-line-container .image-container {
-    width: 53%;
+    width: 50%;
     padding: 0;
 }
 
@@ -85,7 +85,7 @@ Menu Container
 .menu-container .menu-category-container .menu-dish-container .dish,
 .menu-container .menu-drinks-category-container .menu-dish-container .dish {
     justify-content: flex-start;
-    width: 50%;
+    width: 45%;
 }
 
 .menu-container .menu-category-container .menu-dish-container .dish p.text-heading,
@@ -95,23 +95,41 @@ Menu Container
 }
 
 .menu-container .menu-category-container .menu-dish-container :first-child,
-.menu-container .menu-drinks-category-container .menu-dish-container :first-child,
-.menu-container .menu-category-container .menu-dish-container .dish .price-container {
+.menu-container .menu-drinks-category-container .menu-dish-container :first-child {
     margin-left: 0;
     padding-left: 0;
 }
 
-.menu-container .menu-category-container .menu-dish-container .dish .price-container {
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container,
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container,
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price {
     margin-top: 0;
+    margin-left: 0;
     padding-top: 0;
+    padding-left: 0;
 }
 
-.menu-container .menu-category-container .menu-dish-container .dish .price-container .price {
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price .text-sub-heading {
+    margin: 0 0.5rem;
+    padding: 0 0.5em;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price :first-child {
+    margin-right: 0.5rem;
+}
+
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price {
     position: relative;
-    margin-right: 1.3rem;
 }
 
-.menu-container .menu-category-container .menu-dish-container .dish .price-container .price :last-child::after {
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price :last-child::after {
     content: '';
     height: 70%;
     width: 3px;
@@ -119,20 +137,18 @@ Menu Container
     position: absolute;
     right: 0;
 
-    /* Half of the height */
+    /* Half of the left-over space from height */
     top: 15%;
 
     background-color: var(--clr-prm-black);
 }
 
-.menu-container .menu-category-container .menu-dish-container .dish .price-container :last-child > p.text-sub-heading::after {
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price .text-sub-heading.last-of-row::after {
     width: 0;
 }
 
-.menu-container .menu-category-container .menu-dish-container .dish .price-container .price .text-sub-heading {
-    margin: 0 1.3rem;
-    margin-left: 0;
-    padding: 0;
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price span.text-sub-heading {
+    font-weight: normal;
 }
 
 .menu-container .menu-extras-category-container {
@@ -142,16 +158,45 @@ Menu Container
     border-radius: 0.7rem;
 }
 
+.menu-container .menu-extras-category-container .menu-dish-container {
+    width: 90%;
+}
+
+.menu-container .menu-extras-category-container .menu-dish-container .dish {
+    width: 45%;
+}
+
 .menu-container .menu-extras-category-container .heading-container p {
     display: inline-block;
     margin-right: 1rem;
 }
 
-.menu-container .menu-extras-category-container .menu-dish-container {
+.menu-container .menu-extras-category-container .menu-dish-container,
+.menu-container .menu-extras-category-container .menu-dish-container .dish .price-container .price  {
     justify-content: space-between;
+}
+
+.menu-container .menu-extras-category-container .menu-dish-container .dish .price-container .price .text-sub-heading {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .menu-container .menu-drinks-category-container .menu-dish-container .dish .drink {
     width: 100%;
     justify-content: space-between;
+}
+
+.menu-container .menu-drinks-category-container .menu-dish-container .dish .drink .text-sub-heading {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.menu-container .menu-drinks-category-container .menu-dish-container .dish .drink.fresh-juice .text-heading {
+    margin-top: 0.7rem;
+    margin-bottom: 0rem;
+}
+
+.menu-container .menu-drinks-category-container .menu-dish-container .dish .drink.fresh-juice div .text-sub-heading {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
