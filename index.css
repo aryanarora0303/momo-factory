@@ -200,3 +200,79 @@ Menu Container
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
 }
+
+/*===============
+Reviews Container 
+===============*/
+.reviews-container {
+    align-items: center;
+}
+
+.reviews-container .reviews {
+    width: 75%;
+}
+
+.reviews-container .reviews .review {
+    background-color: var(--clr-prm-orange);
+    border-radius: 0.7rem;
+    padding: 2em;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+}
+
+.reviews-container .reviews .review .review-description {
+    /* Only Shows 3 lines of review text */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 10ch;
+}
+
+.reviews-container .reviews .review .reviewer-name {
+    margin-top: 1.5rem;
+}
+
+.reviews-container .reviews .review .source {
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.reviews-container .reviews .review .source a {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.reviews-container .reviews .review .star-ratings i.fas.fa-star {
+    color: var(--clr-prm-white);
+}
+
+.reviews-container .reviews button {
+    box-shadow: none;
+}
+
+.reviews-container .reviews button.slick-prev.slick-arrow::before,
+.reviews-container .reviews button.slick-next.slick-arrow::before {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: var(--clr-prm-black);
+    opacity: 1;
+}
+
+.reviews-container .reviews button.slick-prev.slick-arrow {
+    left: -2.5rem;
+}
+
+.reviews-container .reviews button.slick-next.slick-arrow {
+    right: -2.5rem;
+}
+
+.reviews-container .reviews button.slick-prev.slick-arrow::before {
+    content: "\f053";
+ }
+
+.reviews-container .reviews button.slick-next.slick-arrow::before {
+   content: "\f054";
+}

@@ -248,6 +248,10 @@ img {
 /*-------------
  Custom Classes
 -------------*/
+.test-underline {
+    text-decoration: underline;
+}
+
 .text-bold {
     font-weight: bold;
 }
@@ -318,7 +322,7 @@ img {
     margin: 3rem 0;
 }
 
-.wrapping-container {
+.container-wrapping {
     margin: 0rem;   
 }
 
