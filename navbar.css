@@ -35,13 +35,17 @@ Logo Container
 }
 
 .navbar-container .logo-container img {
-    width: 100%;
+    width: 50%;
     --logo-name-gap: 0.15rem;
     margin-left: var(--logo-name-gap);
     margin-right: var(--logo-name-gap);
 }
 
 .navbar-container .logo-container img.logo {
+    width: 40%;
+}
+
+.navbar-container .logo-container img.name {
     width: 60%;
 }
 
