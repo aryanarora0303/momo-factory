@@ -1,0 +1,60 @@
+/*==============
+Footer Container
+==============*/
+.footer-wrapping-container,
+.footer-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    
+    background-color: var(--clr-prm-orange);
+}
+
+.footer-wrapping-container {
+    --navbar-curve: 1.3rem;
+    border-radius: var(--navbar-curve) var(--navbar-curve) 0 0;
+    box-shadow: 0px 4px 7px rgb(0 0 0 / 25%);
+}
+
+.footer-container {
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container .text-sub-heading {
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+    color: var(--clr-prm-white);
+}
+
+.footer-container a.text-sub-heading {
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*------------
+Logo Container
+------------*/
+.footer-container .logo-container {
+    width: 15%;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.footer-container .logo-container img {
+    width: 100%;
+    --logo-name-gap: 0.15rem;
+    margin-left: var(--logo-name-gap);
+    margin-right: var(--logo-name-gap);
+}
+
+.footer-container .logo-container img.logo {
+    width: 60%;
+}

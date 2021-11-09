@@ -276,3 +276,37 @@ Reviews Container
 .reviews-container .reviews button.slick-next.slick-arrow::before {
    content: "\f054";
 }
+
+.reviews-container .review-us button {
+    background: var(--clr-prm-white);
+    border-color: var(--clr-prm-orange);
+    border-width: 3px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+/*====================
+Social Media Container 
+====================*/
+.social-media-container {
+    align-items: center;
+}
+
+.social-media-container .image-container {
+    width: 40%;
+    position: relative;
+}
+
+.social-media-container .image-container .social-media-logos-container {
+    width: 20%;
+    position: absolute;
+    top: 6.5rem;
+    right: 1.5rem;
+}
+
+.social-media-container .image-container,
+.social-media-container .image-container .social-media-logos-container a {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    cursor: pointer;
+}
