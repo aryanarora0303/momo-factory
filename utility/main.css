@@ -163,13 +163,13 @@ a {
 
 a.active-link {
     position: relative;
-    padding-bottom: 0;
-    color: var(--clr-prm-black)!important;
+    padding-bottom: 0.1em;
+    color: var(--clr-prm-white)!important;
 }
  
 a.inactive-link {
     position: relative;
-    padding-bottom: 0;
+    padding-bottom: 0.1em;
     color: var(--clr-prm-white)!important;
 }
 
@@ -179,10 +179,10 @@ a.inactive-link::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 3px;
+    width: 99%;
+    height: 2px;
     border-radius: 3rem;
-    background-color: var(--clr-txt-primary);
+    background-color: var(--clr-prm-white);
 
     transform: scaleX(0);
     transform-origin: right;

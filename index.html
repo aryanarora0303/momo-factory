@@ -17,22 +17,51 @@
     <link rel="stylesheet" href="./footer.css">
 </head>
 <body>
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top-btn-container container">
+      <button onclick="scrollToTop()">
+        <i class="fas fa-chevron-circle-up fa-3x"></i>
+      </button>
+    </div>
+    
     <!-- Navbar -->
-    <div class="navbar-wrapping-container container-wrapping">
+    <div id="navbar-wrapper" class="navbar-wrapping-container container-wrapping">
         <nav id="navbar" class="navbar-container container container-flex-row container-span-width">
             <div class="logo-container container container-flex-row">
                 <img class="logo" src="./assets/images/logo/momo_factory_logo_image.png" alt="Momo Factory Logo">
                 <img class="name" src="./assets/images/logo/momo_factory_logo_name.png" alt="Momo Factory Logo">
             </div>
             <div class="page-links-container container container-flex-row">
-                <a href="/" class="inactive-link">HOME</a>
-                <a href="/menu.html" class="inactive-link">MENU</a>
+                <a href="/" class="active-link">HOME</a>
+                <a href="/menu.html" class="inactive-link" onclick="scrollToMenu()">
+                  MENU
+                </a>
                 <a href="/contact.html" class="inactive-link">CONTACT</a>
                 <a href="">
                     <button> ORDER NOW </button>
                 </a>
             </div>
+            <div class="side-nav-btn-container container">
+              <button onclick="expandSideNav()">
+                <i class="fas fa-bars fa-2x" onclick="expandSideNav()"></i>
+              </button>
+            </div>
         </nav>
+    </div>
+    <div id="sidenavbar" class="side-navbar-wrapping-container container-wrapping">
+      <div id="sidenavbar-pagelinks" class="page-links-container container container-flex-column">
+        <a href="/" class="active-link">HOME</a>
+        <a href="/menu.html" class="inactive-link" onclick="scrollToMenu()">
+          MENU
+        </a>
+        <a href="/contact.html" class="inactive-link">CONTACT</a>
+        <a href="">
+            <button> ORDER NOW </button>
+        </a>
+        <button class="close-side-nav-btn" onclick="collapseSideNav()">
+          <i class="fas fa-times-circle fa-lg" onclick="collapseSideNav()"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Main -->
@@ -89,7 +118,7 @@
         
         <hr>
 
-        <div class="menu-wrapping-container container-wrapping">
+        <div id="menu" class="menu-wrapping-container container-wrapping">
           <div class="menu-container container container-parent container-flex-column container-span-width">
             <div class="heading-container container container-flex-column">
               <p class="big-heading-2 text-center">MENU</p>
@@ -1473,6 +1502,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
+      // Scroll to Top
+      function scrollToTop() {
+        event.preventDefault();
+        document.getElementById('navbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Scroll to Menu
+      function scrollToMenu() {
+        // collapseSideNav();
+        event.preventDefault();
+        document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Expand Side Nav
+      function expandSideNav() {
+        let navbar_container = document.getElementById("navbar-wrapper");
+        let sidenav = document.getElementById("sidenavbar");
+        let pagelinks = document.getElementById("sidenavbar-pagelinks");
+
+        sidenav.style.height = "225px";
+        sidenav.style.transition = "all 0.5s";
+        pagelinks.style.height = "90%";
+        pagelinks.style.transition = "all 0.7s";
+
+        navbar_container.style.transition =  "border-radius 0.15s ease-in-out";
+        navbar_container.style.borderRadius = "0 0 0 0";
+      }
+
+      // Collapse Side Nav
+      function collapseSideNav() {
+        let navbar_container = document.getElementById("navbar-wrapper");
+        let sidenav = document.getElementById("sidenavbar");
+        let pagelinks = document.getElementById("sidenavbar-pagelinks");
+
+        sidenav.style.height = "0";
+        sidenav.style.transition = "all 0.5s";
+        pagelinks.style.height = "0";
+        pagelinks.style.transition = "all 0.7s";
+
+        navbar_container.style.transition =  "border-radius 0.95s ease-in-out";
+        navbar_container.style.borderRadius = "0 0 1.3rem 1.3rem";
+      }
 
       // Photo Gallery Carousel
       $(document).ready(function(){
@@ -1486,7 +1557,7 @@
         
         $('.photo-gallery.slider-nav').slick({
           slidesToShow: 5,
-          slidesToScroll: 1,
+          slidesToScroll: 5,
           asNavFor: '.slider-for',
           infinite: true,
           arrows: false,

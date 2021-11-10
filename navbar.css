@@ -1,6 +1,7 @@
 /*=============
 Nabar Container
 =============*/
+.side-navbar-wrapping-container,
 .navbar-wrapping-container,
 .navbar-container {
     margin-top: 0;
@@ -13,8 +14,20 @@ Nabar Container
 }
 
 .navbar-wrapping-container {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
     --navbar-curve: 1.3rem;
     border-radius: 0 0 var(--navbar-curve) var(--navbar-curve);
+    box-shadow: 0px 4px 7px rgb(0 0 0 / 25%);
+}
+
+.side-navbar-wrapping-container {
+    display: block;
+    height: 0;
+    overflow-y: hidden;
+    --navbar-curve: 1.3rem;
+    border-radius: 0 0 var(--navbar-curve) var(--navbar-curve);
+    background-color: var(--clr-prm-white);
     box-shadow: 0px 4px 7px rgb(0 0 0 / 25%);
 }
 
@@ -24,11 +37,17 @@ Nabar Container
     align-items: center;
 }
 
+.navbar-container .side-nav-btn-container {
+    display: none;
+    margin: 0.3rem;
+    padding: 0.3em;
+}
+
 /*------------
 Logo Container
 ------------*/
 .navbar-container .logo-container {
-    width: 15%;
+    width: 13%;
     margin-top: 0;
     margin-bottom: 0;
     align-items: center;
@@ -49,26 +68,150 @@ Logo Container
     width: 60%;
 }
 
+@media only screen and (max-width: 1550px) {
+    .navbar-container .logo-container {
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .navbar-container .logo-container {
+        width: 19%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-container .logo-container {
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .navbar-container .logo-container {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* .navbar-wrapping-container {
+        border-radius: 0;
+    } */
+
+    .navbar-container {
+        margin-bottom: 0;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navbar-container .logo-container {
+        width: 25%;
+    }
+
+    .navbar-container .page-links-container {
+        display: none;
+    }
+
+    .navbar-container .side-nav-btn-container {
+        position: absolute;
+        display: inline-block;
+
+        right: 1.5%;
+    }
+}
+
+@media only screen and (max-width: 658px) {
+    .navbar-container .logo-container {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .navbar-container .logo-container {
+        width: 31%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-container .logo-container {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    .navbar-container .logo-container {
+        width: 39%;
+    }
+}
+
 /*------------------
 Page Links Container
 ------------------*/
 .navbar-container .page-links-container {
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar-container .page-links-container a {
+    font-size: 1.2rem;
     color: var(--clr-txt-white);
     letter-spacing: 1px;
 }
 
-.navbar-container .page-links-container a:nth-of-type(4) {
+.navbar-container .page-links-container :last-child {
     margin-right: 0;
 }
 
 .navbar-container .page-links-container button {
     border: 2px solid var(--clr-prm-white);
     box-shadow: none;
+}
+
+.navbar-container .side-nav-btn-container button {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-container .side-nav-btn-container button i {
+    /* background-color: var(--clr-txt-white); */
+    color: var(--clr-txt-white);
+}
+
+.side-navbar-wrapping-container .page-links-container {
+    position: relative;
+    height: 0%;
+    align-items: center;
+    padding-top: 1em;
+    margin-top: 0;
+    background-color: var(--clr-prm-white);
+    --navbar-curve: 1.3rem;
+    border-radius: 0 0 var(--navbar-curve) var(--navbar-curve);
+}
+
+.side-navbar-wrapping-container .page-links-container a {
+    color: var(--clr-txt-orange) !important;
+    text-shadow: 0 3px 5px rgb(0 0 0 / 13%);
+}
+
+.side-navbar-wrapping-container .page-links-container a button {
+    background-color: var(--clr-prm-orange);
+    color: var(--clr-prm-white);
+    border-color: var(--clr-txt-white);
+}
+
+.side-navbar-wrapping-container .page-links-container button.close-side-nav-btn {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    background-color: var(--clr-prm-white);
+    color: var(--clr-prm-orange);
+    border-color: var(--clr-txt-white);
+    box-shadow: none;
+}
+
+.side-navbar-wrapping-container .page-links-container button.close-side-nav-btn i {
+    color: var(--clr-txt-orange);
 }
