@@ -274,7 +274,7 @@ img {
 .big-heading-1 {
     font-family: var(--ff-brandon);
     font-weight: bold;
-    font-size: 4.2rem;
+    font-size: 3.6rem;
 }
 
 .big-heading-2 {
@@ -349,6 +349,12 @@ img {
     width: min(75%, 100rem);
     margin-right: auto!important;
     margin-left: auto!important;
+}
+
+@media only screen and (max-width: 1500px) { 
+    .container-span-width {
+        width: min(80%, 100rem);
+    }
 }
 
 @media only screen and (max-width: 1200px) {
