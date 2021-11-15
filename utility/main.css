@@ -144,6 +144,8 @@ body {
     font-size: 1.3125rem;
 
     background-color: var(--clr-bg-white);
+
+    overflow-x: hidden;
 }
 
 body,
