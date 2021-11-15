@@ -280,8 +280,20 @@ img {
 .big-heading-2 {
     font-family: var(--ff-brandon);
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 2.9rem;
     line-height: 1.2;
+}
+
+@media only screen and (max-width: 550px) {
+    .big-heading-2 { 
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .big-heading-2 { 
+        font-size: 2.1rem;
+    }
 }
 
 .heading {

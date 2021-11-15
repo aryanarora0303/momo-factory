@@ -16,6 +16,7 @@ Scroll to Top Button
     background-color: var(--clr-prm-white);
     border: none;
     box-shadow: none;
+    z-index: 3;
 }
 /* 
 .scroll-to-top-btn-container button:hover {
@@ -61,6 +62,22 @@ Tag Line Container
     margin-top: 0;
 }
 
+/* ============ */
+/* Experimental */
+/* ============ */
+.tag-line-container .tag-line br {
+    display: block;
+}
+
+.tag-line-container .tag-line span {
+    color: var(--clr-prm-orange);
+    font-size: 4.1rem;
+    line-height: 0.3;
+}
+/* ^^^^^^^^^^^^ */
+/* Experimental */
+/* ^^^^^^^^^^^^ */
+
 @media only screen and (max-width: 1650px) { 
     .tag-line-container .tag-line {
         width: 55%;
@@ -77,7 +94,6 @@ Tag Line Container
     }
 
     .tag-line-container .tag-line span {
-        color: var(--clr-prm-orange);
         font-size: 4.1rem;
         line-height: 0.3;
     }
@@ -91,7 +107,7 @@ Tag Line Container
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) { 
     .tag-line-wrapping-container {
         height: auto
     }
@@ -187,7 +203,29 @@ Tag Line Container
 /*===================== 
 Photo Gallery Container 
 =====================*/
+.photo-gallery-wrapping-container {
+    position: relative;
+}
+
+.photo-blur-container {
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    filter: blur(1.7rem);
+    background-color: var(--clr-txt-white);
+    z-index: 1;
+}
+
+.photo-blur-container:nth-of-type(1) {
+    left: -115px;
+}
+
+.photo-blur-container:nth-of-type(2) {
+    right: -115px;
+}
+
 .photo-gallery-container {
+    z-index: 0;
     align-items: center;
 }
 
@@ -195,7 +233,7 @@ Photo Gallery Container
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .photo-gallery-container .photo-gallery {
@@ -203,11 +241,11 @@ Photo Gallery Container
 }
 
 .photo-gallery-container .photo-gallery.slider-for {
-    width: 60%;
+    width: 63%;
 }
 
 .photo-gallery-container .photo-gallery.slider-nav {
-    width: 100%;
+    width: 155%;
 }
 
 .photo-gallery-container .photo-gallery.slider-for img {
@@ -221,7 +259,244 @@ Photo Gallery Container
     margin: 0.7rem;
     box-shadow: none;
     border-radius: 0.7rem;
-    width: 50%;
+    width: 45%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .photo-gallery-container .photo-gallery.slider-for {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .photo-gallery-container .heading-container {
+        width: 90%;
+    }
+
+    .photo-gallery-container .photo-gallery.slider-for {
+        display: none;
+    }
+
+    .photo-gallery-container .photo-gallery.slider-nav {
+        width: 150%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .photo-gallery-container .heading-container {
+        width: 95%;
+    }
+
+    .photo-gallery-container .heading-container p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .photo-gallery-container .photo-gallery.slider-nav {
+        width: 120%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .photo-gallery-container .heading-container {
+        width: 100%;
+    }
+
+    .photo-gallery-container .photo-gallery.slider-nav {
+        width: 130%;
+    }
+
+    .photo-gallery-container .photo-gallery.slider-nav img {
+        margin: 0.15rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .photo-gallery-container .photo-gallery.slider-nav {
+        width: 135%;
+    }
+}
+
+/*===============
+Reviews Container 
+===============*/
+.reviews-container {
+    align-items: center;
+}
+
+.reviews-container .review {
+    width: 70%;
+}
+
+.reviews-container .review {
+    background-color: var(--clr-prm-orange);
+    border-radius: 0.7rem;
+    padding: 2em;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+}
+
+.reviews-container .review .review-description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 10ch;
+}
+
+.reviews-container .review .reviewer-name {
+    margin-top: 1.5rem;
+}
+
+.reviews-container .review .source {
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.reviews-container .review .source a {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--clr-prm-black);
+    text-decoration: underline;
+}
+
+.reviews-container .review .star-ratings i.fas.fa-star {
+    color: var(--clr-prm-white);
+}
+
+.reviews-container .bootstrap .carousel-indicators {
+    bottom: -30px;
+}
+
+.reviews-container .bootstrap .carousel-indicators button {
+    background-color: var(--clr-txt-orange);
+    box-shadow: none;
+    opacity: 0.3;
+}
+
+.reviews-container .bootstrap .carousel-indicators button.active {
+    background-color: var(--clr-txt-orange);
+    box-shadow: none;
+    opacity: 1;
+}
+
+.reviews-container .bootstrap button.carousel-control-prev,
+.reviews-container .bootstrap button.carousel-control-next {
+    width: 7%;
+    height: 100%;
+    box-shadow: none;
+}
+
+.reviews-container .bootstrap button.carousel-control-prev span {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.reviews-container .bootstrap button.carousel-control-next span {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.reviews-container .review-us button {
+    background: var(--clr-prm-white);
+    border-color: var(--clr-prm-orange);
+    border-width: 3px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .reviews-container .review {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .reviews-container .review {
+        width: 95%;
+    }
+
+    .reviews-container .bootstrap button.carousel-control-prev {
+        left: -25px;
+    }
+
+    .reviews-container .bootstrap button.carousel-control-next {
+        right: -25px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .reviews-container .heading-container {
+        width: 90%;
+    } 
+
+    .reviews-container .review {
+        width: 97.5%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .reviews-container .heading-container {
+        width: 95%;
+    }
+
+    .reviews-container .heading-container p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .reviews-container .bootstrap,
+    .reviews-container .bootstrap .carousel-inner {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+    }
+
+    .reviews-container .review {
+        padding: 1.5em
+    }
+
+    .reviews-container .review .review-description {
+        margin-bottom: 0.5rem;
+    }
+
+    .reviews-container .review .reviewer-name {
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .reviews-container .heading-container {
+        width: 100%;
+    }
+
+    .reviews-container .review {
+        padding: 1em
+    }
+}
+
+/*====================
+Social Media Container 
+====================*/
+.social-media-container {
+    align-items: center;
+}
+
+.social-media-container .image-container {
+    width: 40%;
+    position: relative;
+}
+
+.social-media-container .image-container .social-media-logos-container {
+    width: 20%;
+    position: absolute;
+    top: 6.5rem;
+    right: 1.5rem;
+}
+
+.social-media-container .image-container,
+.social-media-container .image-container .social-media-logos-container a {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    cursor: pointer;
 }
 
 /*============
@@ -360,114 +635,4 @@ Menu Container
 .menu-container .menu-drinks-category-container .menu-dish-container .dish .drink.fresh-juice div .text-sub-heading {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
-}
-
-/*===============
-Reviews Container 
-===============*/
-.reviews-container {
-    align-items: center;
-}
-
-.reviews-container .reviews {
-    width: 75%;
-}
-
-.reviews-container .reviews .review {
-    background-color: var(--clr-prm-orange);
-    border-radius: 0.7rem;
-    padding: 2em;
-    box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
-}
-
-.reviews-container .reviews .review .review-description {
-    /* Only Shows 3 lines of review text */
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    max-height: 10ch;
-}
-
-.reviews-container .reviews .review .reviewer-name {
-    margin-top: 1.5rem;
-}
-
-.reviews-container .reviews .review .source {
-    margin-top: 0.1rem;
-    margin-bottom: 0.3rem;
-}
-
-.reviews-container .reviews .review .source a {
-    margin: 0;
-    text-decoration: underline;
-}
-
-.reviews-container .reviews .review .star-ratings i.fas.fa-star {
-    color: var(--clr-prm-white);
-}
-
-.reviews-container .reviews button {
-    box-shadow: none;
-}
-
-.reviews-container .reviews button.slick-prev.slick-arrow::before,
-.reviews-container .reviews button.slick-next.slick-arrow::before {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: 900;
-    font-size: 1.7rem;
-    color: var(--clr-prm-black);
-    opacity: 1;
-}
-
-.reviews-container .reviews button.slick-prev.slick-arrow {
-    left: -2.5rem;
-}
-
-.reviews-container .reviews button.slick-next.slick-arrow {
-    right: -2.5rem;
-}
-
-.reviews-container .reviews button.slick-prev.slick-arrow::before {
-    content: "\f053";
- }
-
-.reviews-container .reviews button.slick-next.slick-arrow::before {
-   content: "\f054";
-}
-
-.reviews-container .review-us button {
-    background: var(--clr-prm-white);
-    border-color: var(--clr-prm-orange);
-    border-width: 3px;
-    padding-left: 0.7em;
-    padding-right: 0.7em;
-}
-
-/*====================
-Social Media Container 
-====================*/
-.social-media-container {
-    align-items: center;
-}
-
-.social-media-container .image-container {
-    width: 40%;
-    position: relative;
-}
-
-.social-media-container .image-container .social-media-logos-container {
-    width: 20%;
-    position: absolute;
-    top: 6.5rem;
-    right: 1.5rem;
-}
-
-.social-media-container .image-container,
-.social-media-container .image-container .social-media-logos-container a {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-    cursor: pointer;
 }
