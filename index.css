@@ -205,6 +205,7 @@ Photo Gallery Container
 =====================*/
 .photo-gallery-wrapping-container {
     overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
 }
 
@@ -279,7 +280,7 @@ Photo Gallery Container
     }
 
     .photo-gallery-container .photo-gallery.slider-nav {
-        width: 150%;
+        width: 120%;
     }
 }
 

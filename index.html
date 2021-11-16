@@ -34,7 +34,7 @@
             </div>
             <div class="page-links-container container container-flex-row">
                 <a href="/" class="active-link">HOME</a>
-                <a href="/menu.html" class="inactive-link" onclick="scrollToMenu()">
+                <a href="/menu.html" class="inactive-link" onclick="scrollToMenuFromNavBar()">
                   MENU
                 </a>
                 <a href="/contact.html" class="inactive-link">CONTACT</a>
@@ -71,7 +71,7 @@
     <div id="sidenavbar" class="side-navbar-wrapping-container container-wrapping">
       <div id="sidenavbar-pagelinks" class="page-links-container container container-flex-column">
         <a href="/" class="active-link">HOME</a>
-        <a href="/menu.html" class="inactive-link" onclick="scrollToMenu()">
+        <a href="/menu.html" class="inactive-link" onclick="scrollToMenuFromSideBar()">
           MENU
         </a>
         <a href="/contact.html" class="inactive-link">CONTACT</a>
@@ -1592,19 +1592,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
     <script>
       // Scroll to Top
       function scrollToTop() {
         event.preventDefault();
-        document.getElementById('navbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Incompatible with Safari
+        //document.getElementById('navbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        seamless.elementScrollIntoView(document.getElementById("navbar"), {
+          behavior: "smooth",
+          block: "start"
+        });
       }
 
       // Scroll to Menu
-      function scrollToMenu() {
+      function scrollToMenuFromNavBar() {
+        event.preventDefault();
+
+        // Incompatible with Safari
+        // document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        seamless.elementScrollIntoView(document.getElementById("menu"), {
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+
+      function scrollToMenuFromSideBar() {
         event.preventDefault();
         collapseSideNav();
         setTimeout(function(){
-          document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Incompatible with Safari
+          // document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          seamless.elementScrollIntoView(document.getElementById("menu"), {
+            behavior: "smooth",
+            block: "start"
+          });
         }, 900); //sidebar nav takes 800 millisecond (0.8s) to close
       }
 
@@ -1711,8 +1737,6 @@
           autoplaySpeed: 7000
         });
       });
-
-
     </script>
 </body>
 </html>
