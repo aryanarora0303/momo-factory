@@ -145,7 +145,7 @@ body {
 
     background-color: var(--clr-bg-white);
 
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 body,
