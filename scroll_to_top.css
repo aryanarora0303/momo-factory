@@ -1,0 +1,28 @@
+/*==================
+Scroll to Top Button
+===================*/
+.scroll-to-top-btn-container {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll-to-top-btn-container button {
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    background-color: var(--clr-prm-white);
+    border: none;
+    box-shadow: none;
+    z-index: 3;
+}
+/* 
+.scroll-to-top-btn-container button:hover {
+    background-color: var(--clr-txt-black);
+} */
+
+.scroll-to-top-btn-container button i {
+    color: var(--clr-prm-orange);
+}

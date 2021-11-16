@@ -1,0 +1,68 @@
+/*====================
+Contact Info Container
+====================*/
+.contact-us-container {
+    align-items: center;
+}
+
+.contact-us-container .contact-info {
+    width: 90%;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.contact-us-container .contact-info .hours-container, 
+.contact-us-container .contact-info .location-phone-container {
+    align-items: center;
+    width: 45%;
+    height: 100% !important;
+    border-radius: 0.7rem;
+    border: 3px solid var(--clr-prm-orange);
+}
+
+.contact-us-container .contact-info .location-phone-container {
+    background-color: var(--clr-txt-orange);
+    align-items: flex-start;
+}
+
+.contact-us-container .contact-info .hours-container .hours {
+    width: 75%;
+}
+
+.contact-us-container .contact-info .hours-container .hours {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+}
+
+.contact-us-container .contact-info .hours-container .hours .days,
+.contact-us-container .contact-info .hours-container .hours .timings {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.contact-us-container .contact-info .hours-container .hours .days {
+    align-items: flex-start;
+}
+
+.contact-us-container .contact-info .hours-container .hours .timings {
+    align-items: flex-end;
+}
+
+.contact-us-container .contact-info .hours-container .hours .days p,
+.contact-us-container .contact-info .hours-container .hours .timings p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-us-container .contact-info .location-phone-container .phone,
+.contact-us-container .contact-info .location-phone-container .location {
+    align-items: center;
+}
+
+.contact-us-container .contact-info .location-phone-container .phone i,
+.contact-us-container .contact-info .location-phone-container .location i {
+    color: var(--clr-txt-black);
+}
