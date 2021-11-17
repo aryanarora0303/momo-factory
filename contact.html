@@ -180,7 +180,7 @@
           <div class="social-media-container container container-parent container-flex-column container-span-width">
             <div class="heading-container container container-flex-column">
               <p class="big-heading-2 text-center">We are Social</p>
-              <p class="text-heading text-center">Follow us for Deals, Offers, Promos and Much More...</p>
+              <p class="text-sub-heading text-center">Follow us for Deals, Offers, Promos and Much More...</p>
             </div>
 
             <div class="image-container container">
@@ -227,5 +227,76 @@
     <Script></Script>
     <Script src="./navbar.js"></Script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+      // Scroll to Top
+      function scrollToTop() {
+        event.preventDefault();
+
+        // Incompatible with Safari
+        //document.getElementById('navbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        seamless.elementScrollIntoView(document.getElementById("navbar"), {
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+
+      // Scroll to Menu
+      function scrollToMenuFromNavBar() {
+        event.preventDefault();
+
+        // Incompatible with Safari
+        // document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        seamless.elementScrollIntoView(document.getElementById("menu"), {
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+
+      function scrollToMenuFromSideBar() {
+        event.preventDefault();
+        collapseSideNav();
+        setTimeout(function(){
+          // Incompatible with Safari
+          // document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          seamless.elementScrollIntoView(document.getElementById("menu"), {
+            behavior: "smooth",
+            block: "start"
+          });
+        }, 900); //sidebar nav takes 800 millisecond (0.8s) to close
+      }
+
+      // Expand Side Nav
+      function expandSideNav() {
+        let navbar_container = document.getElementById("navbar-wrapper");
+        let sidenav = document.getElementById("sidenavbar");
+        let pagelinks = document.getElementById("sidenavbar-pagelinks");
+
+        sidenav.style.height = "225px";
+        sidenav.style.transition = "all 0.5s";
+        pagelinks.style.height = "202px";
+        pagelinks.style.transition = "all 0.8s";
+
+        navbar_container.style.transition =  "border-radius 0.15s ease-in-out";
+        navbar_container.style.borderRadius = "0 0 0 0";
+      }
+
+      // Collapse Side Nav
+      function collapseSideNav() {
+        let navbar_container = document.getElementById("navbar-wrapper");
+        let sidenav = document.getElementById("sidenavbar");
+        let pagelinks = document.getElementById("sidenavbar-pagelinks");
+
+        sidenav.style.height = "0";
+        sidenav.style.transition = "all 0.8s";
+        pagelinks.style.height = "0";
+        pagelinks.style.transition = "all 0.5s";
+
+        navbar_container.style.transition =  "border-radius 0.95s ease-in-out";
+        navbar_container.style.borderRadius = "0 0 1.3rem 1.3rem";
+      }
+    </script>
 </body>
 </html>
