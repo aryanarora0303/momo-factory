@@ -98,9 +98,9 @@
             </ul>
           </div>
         </div>
-        <button class="close-side-nav-btn" onclick="collapseSideNav()">
+        <!-- <button class="close-side-nav-btn" onclick="collapseSideNav()">
           <i class="fas fa-times-circle fa-lg" onclick="collapseSideNav()"></i>
-        </button>
+        </button> -->
       </div>
     </div>
 
@@ -139,6 +139,11 @@
             <div class="photo-gallery slider-for">
               <img src="./assets/images/gallery/1.jpg" alt="">
               <img src="./assets/images/gallery/2.jpg" alt="">
+              <img src="./assets/images/gallery/3.jpg" alt="">
+              <img src="./assets/images/gallery/6.jpg" alt="">
+              <img src="./assets/images/gallery/8.jpg" alt="">
+              <img src="./assets/images/gallery/9.jpg" alt="">
+              <img src="./assets/images/gallery/10.jpg" alt="">
               <img src="./assets/images/gallery/1.jpg" alt="">
               <img src="./assets/images/gallery/2.jpg" alt="">
               <img src="./assets/images/gallery/3.jpg" alt="">
@@ -150,6 +155,11 @@
             <div class="photo-gallery slider-nav">
               <img src="./assets/images/gallery/1.jpg" alt="">
               <img src="./assets/images/gallery/2.jpg" alt="">
+              <img src="./assets/images/gallery/3.jpg" alt="">
+              <img src="./assets/images/gallery/6.jpg" alt="">
+              <img src="./assets/images/gallery/8.jpg" alt="">
+              <img src="./assets/images/gallery/9.jpg" alt="">
+              <img src="./assets/images/gallery/10.jpg" alt="">
               <img src="./assets/images/gallery/1.jpg" alt="">
               <img src="./assets/images/gallery/2.jpg" alt="">
               <img src="./assets/images/gallery/3.jpg" alt="">
@@ -1700,10 +1710,10 @@
         
         $('.photo-gallery.slider-nav').slick({
           slidesToShow: 7,
-          slidesToScroll: 7,
+          slidesToScroll: 5,
           asNavFor: '.slider-for',
           infinite: true,
-          arrows: false,
+          arrows: true,
           centerMode: true,
           focusOnSelect: true,
           autoplay: true,
