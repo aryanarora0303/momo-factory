@@ -1638,7 +1638,7 @@
             behavior: "smooth",
             block: "start"
           });
-        }, 900); //sidebar nav takes 800 millisecond (0.8s) to close
+        }, 600); //sidebar nav takes 800 millisecond (0.5s) to close
       }
 
       // Toggle Side Nav
@@ -1665,9 +1665,9 @@
         let pagelinks = document.getElementById("sidenavbar-pagelinks");
 
         sidenav.style.height = "225px";
-        sidenav.style.transition = "all 0.5s";
+        sidenav.style.transition = "all 0.3s";
         pagelinks.style.height = "202px";
-        pagelinks.style.transition = "all 0.8s";
+        pagelinks.style.transition = "all 0.5s";
 
         navbar_container.style.transition =  "border-radius 0.15s ease-in-out";
         navbar_container.style.borderRadius = "0 0 0 0";
@@ -1680,9 +1680,9 @@
         let pagelinks = document.getElementById("sidenavbar-pagelinks");
 
         sidenav.style.height = "0";
-        sidenav.style.transition = "all 0.8s";
+        sidenav.style.transition = "all 0.5s";
         pagelinks.style.height = "0";
-        pagelinks.style.transition = "all 0.5s";
+        pagelinks.style.transition = "all 0.3s";
 
         navbar_container.style.transition =  "border-radius 0.95s ease-in-out";
         navbar_container.style.borderRadius = "0 0 1.3rem 1.3rem";
