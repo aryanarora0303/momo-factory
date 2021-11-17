@@ -584,6 +584,10 @@ Menu Container
     padding-bottom: 0.3em;
 }
 
+.menu-container .menu-drinks-category-container .menu-dish-container .dish p.text-heading {
+    font-size: 1.5rem;
+}
+
 .menu-container .menu-category-container .menu-dish-container .dish p.text-heading,
 .menu-container .menu-drinks-category-container .menu-dish-container .dish p.text-heading {
     margin-left: 0;
@@ -858,6 +862,11 @@ Menu Container
     .menu-container .menu-extras-category-container .menu-dish-container .dish .extra-comment {
         display: block;
         font-size: 0.9rem;
+    }
+
+    .menu-container .menu-drinks-category-container .menu-dish-container .dish p.text-heading {
+        font-size: 1.4rem;
+        font-weight: 700;
     }
 }
 
