@@ -1605,6 +1605,24 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
     <script>
+      // Check if scrollTo has 'menu' value and then scroll to Menu
+      $(document).ready(function(){
+        let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        let scrollTo = urlParams.get('scrollTo');
+
+        console.log(scrollTo);
+
+        if(scrollTo == "menu"){
+          setTimeout(function(){
+            seamless.elementScrollIntoView(document.getElementById("menu"), {
+              behavior: "smooth",
+              block: "start"
+            });
+          }, 600);
+        }
+      });
+
       // Open Home page
       function openHomePage() {
         event.preventDefault();

@@ -36,7 +36,7 @@
             </div>
             <div class="page-links-container container container-flex-row">
                 <a href="/" class="active-link">HOME</a>
-                <a href="/menu.html" class="inactive-link" onclick="openHomePage()">
+                <a href="/menu.html" class="inactive-link" onclick="openHomePageAndScrollToMenu()">
                   MENU
                 </a>
                 <a href="/contact.html" class="inactive-link">CONTACT</a>
@@ -73,7 +73,7 @@
     <div id="sidenavbar" class="side-navbar-wrapping-container container-wrapping">
       <div id="sidenavbar-pagelinks" class="page-links-container container container-flex-column">
         <a href="/" class="active-link">HOME</a>
-        <a href="/menu.html" class="inactive-link" onclick="openHomePage()">
+        <a href="/menu.html" class="inactive-link" onclick="openHomePageAndScrollToMenu()">
           MENU
         </a>
         <a href="/contact.html" class="inactive-link">CONTACT</a>
@@ -233,6 +233,12 @@
       function openHomePage() {
         event.preventDefault();
         window.open("/index.html","_self");
+      }
+
+      // Open Home page and then scroll to menu
+      function openHomePageAndScrollToMenu() {
+        event.preventDefault();
+        window.open("/index.html?scrollTo=menu","_self");
       }
 
       // Scroll to Top
