@@ -226,6 +226,7 @@ Photo Gallery Container
     padding: 1em;
     border-radius: 0.7rem;
     box-shadow: 0 3px 7px rgb(0 0 0 / 20%);
+    cursor: pointer;
 }
 
 .photo-gallery-container .photo-gallery.slider-nav img {
@@ -233,6 +234,7 @@ Photo Gallery Container
     box-shadow: none;
     border-radius: 0.7rem;
     width: 45%;
+    cursor: pointer;
 }
 
 .photo-gallery-container .photo-gallery.slider-nav button.slick-prev,
@@ -446,10 +448,11 @@ Reviews Container
 .reviews-container .bootstrap button.carousel-control-next:focus,
 .reviews-container .bootstrap button.carousel-control-prev:active,
 .reviews-container .bootstrap button.carousel-control-next:active,
-.reviews-container .bootstrap button.carousel-control-prev:hover,
-.reviews-container .bootstrap button.carousel-control-next:hover {
+.reviews-container .bootstrap button.carousel-control-prev:visited,
+.reviews-container .bootstrap button.carousel-control-next:visited {
     box-shadow: none !important;
     background: transparent !important;
+    outline: none;
 }
 
 .reviews-container .bootstrap button.carousel-control-prev span {

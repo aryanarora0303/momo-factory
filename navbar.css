@@ -52,6 +52,7 @@ Logo Container
     margin-top: 0;
     margin-bottom: 0;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar-container .logo-container img {
