@@ -445,7 +445,9 @@ Reviews Container
 .reviews-container .bootstrap button.carousel-control-prev:focus,
 .reviews-container .bootstrap button.carousel-control-next:focus,
 .reviews-container .bootstrap button.carousel-control-prev:active,
-.reviews-container .bootstrap button.carousel-control-next:active {
+.reviews-container .bootstrap button.carousel-control-next:active,
+.reviews-container .bootstrap button.carousel-control-prev:hover,
+.reviews-container .bootstrap button.carousel-control-next:hover {
     box-shadow: none !important;
     background: transparent !important;
 }
