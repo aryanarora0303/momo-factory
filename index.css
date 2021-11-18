@@ -443,8 +443,11 @@ Reviews Container
 }
 
 .reviews-container .bootstrap button.carousel-control-prev:focus,
-.reviews-container .bootstrap button.carousel-control-next:focus {
-    box-shadow: none;
+.reviews-container .bootstrap button.carousel-control-next:focus,
+.reviews-container .bootstrap button.carousel-control-prev:active,
+.reviews-container .bootstrap button.carousel-control-next:active {
+    box-shadow: none !important;
+    background: transparent !important;
 }
 
 .reviews-container .bootstrap button.carousel-control-prev span {
