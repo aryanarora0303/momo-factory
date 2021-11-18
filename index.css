@@ -439,6 +439,7 @@ Reviews Container
     width: 7%;
     height: 100%;
     box-shadow: none;
+    background: transparent;
 }
 
 .reviews-container .bootstrap button.carousel-control-prev:focus,
