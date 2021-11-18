@@ -66,6 +66,9 @@ html {
     --ff-carattere: "Carattere", sans-serif;
 
     color: var(--clr-txt-black);
+
+    /* Removes blue highlight when elements are selected */
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 *,
