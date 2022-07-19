@@ -257,6 +257,12 @@ img {
     text-decoration: underline;
 }
 
+.text-underline-on-hover:hover {
+    transition: all 200ms ease-in-out;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .text-bold {
     font-weight: bold;
 }

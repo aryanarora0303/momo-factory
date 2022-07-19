@@ -40,6 +40,20 @@ Footer Container
     margin-right: 0;
 }
 
+.terms-conditions-container {
+    font-size: 0.8rem !important;
+}
+
+.terms-conditions-container p {
+    font-size: inherit !important;
+    margin-left: 0.3rem !important;
+    margin-right: 0.3rem !important;
+}
+
+.terms-conditions-container p.terms {
+    margin-right: 0.1rem;
+}
+
 /*------------
 Logo Container
 ------------*/

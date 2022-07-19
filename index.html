@@ -62,6 +62,10 @@
                         <img src="./assets/images/pickup.png" alt="">
                         <a class="dropdown-item" target="_blank" href="https://onlinemomofactory.com/">Pickup</a>
                       </li>
+                      <li class="container-flex-row">
+                        <img src="./assets/images/delivery.png" alt="">
+                        <a class="dropdown-item" target="_blank" href="./ueat.html">Delivery</a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1602,6 +1606,11 @@
             Aurora Digital
           </a>
         </p>
+
+        <div class="terms-conditions-container container container-flex-row text-sub-heading">
+          <p class="text-sub-heading terms">Terms and Conditions</p>
+          <p class="text-sub-heading text-underline-on-hover" onclick="terms_and_conditions_fr()">Fr</p> | <p class="text-sub-heading text-underline-on-hover" onclick="terms_and_conditions_en()">En</p>
+        </div>
       </footer>
     </div>
 
@@ -1720,6 +1729,16 @@
 
         navbar_container.style.transition =  "border-radius 0.95s ease-in-out";
         navbar_container.style.borderRadius = "0 0 1.3rem 1.3rem";
+      }
+
+      // Ueat Terms and Conditions Pagelinks
+      function terms_and_conditions_fr() {
+        event.preventDefault();
+        window.open("https://ueat.io/docs/modalites_et_conditions_du_site_web_et_de_l_Apllication_mobile/modalites_et_conditions_du_site_web_et_de_l_Apllication_mobile.pdf", target="_blank");
+      }
+      function terms_and_conditions_en() {
+        event.preventDefault();
+        window.open("https://ueat.io/docs/terms_and_conditions.pdf", target="_blank");
       }
 
       // Photo Gallery Carousel
