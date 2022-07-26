@@ -825,6 +825,10 @@ Menu Container
     padding: 0 !important;
 }
 
+.menu-container .menu-extras-category-container .menu-dish-container .dish .extra-comment::after {
+    width: 0 !important;
+}
+
 .menu-container .menu-extras-category-container .menu-dish-container .dish ul li:first-child {
     margin-top: 0;
 }
