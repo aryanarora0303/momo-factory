@@ -976,12 +976,17 @@ Menu Container
 
 @media only screen and (max-width: 668px) {
     .menu-container .menu-extras-category-container,
-    .menu-container .menu-extras-category-container .menu-dish-container {
+    .menu-container .menu-extras-category-container .menu-dish-container,
+    .menu-container .menu-lunch-special-category-container.menu-extras-category-container {
         width: 100%;
     }
 
     .menu-container .menu-extras-category-container .menu-dish-container .dish {
         width: 50%;
+    }
+
+    .menu-container .menu-lunch-special-category-container.menu-extras-category-container .heading-container p {
+        margin-right: 0.1rem;
     }
 
     .menu-container .menu-drinks-category-container .menu-dish-container,
