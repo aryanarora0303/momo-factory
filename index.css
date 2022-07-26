@@ -735,6 +735,11 @@ Menu Container
     padding-left: 0;
 }
 
+.menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
 .menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price {
     width: 100%;
     justify-content: space-between;
@@ -745,6 +750,7 @@ Menu Container
     padding: 0 0.5em;
     margin-left: 0;
     padding-left: 0;
+    font-size: 1rem;
 }
 
 .menu-container .menu-category-container .menu-dish-container .dish .dish-price-container .price-col-container .price :first-child {
